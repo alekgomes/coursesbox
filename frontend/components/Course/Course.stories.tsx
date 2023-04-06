@@ -22,7 +22,7 @@ export const BasicCourse: ComponentStoryObj<typeof Course> = {
       width: 1368,
       height: 770,
       alt: "Logo for Hands-On React. Build advanced React JS Frontend with expert",
-      src: "/covers/hands-on_reactjs_cover.png",
+      src: "./covers/hands-on_reactjs_cover.png",
     },
     children: (
       <>

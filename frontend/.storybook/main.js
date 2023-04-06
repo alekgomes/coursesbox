@@ -1,4 +1,4 @@
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 
 module.exports = {
   stories: [
@@ -25,8 +25,8 @@ module.exports = {
       new TsconfigPathsPlugin({
         extensions: config.resolve.extensions,
       }),
-    ];
-    return config;
+    ]
+    return config
   },
   framework: "@storybook/react",
   core: {
@@ -37,4 +37,4 @@ module.exports = {
     emotionAlias: false,
   },
   typescript: { reactDocgen: false },
-};
+}

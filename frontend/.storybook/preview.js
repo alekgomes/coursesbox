@@ -1,39 +1,39 @@
-import * as NextImage from "next/image";
-import { ThemeProvider, Global } from "@emotion/react";
-import { RouterContext } from "next/dist/shared/lib/router-context";
+import * as NextImage from "next/image"
+import { ThemeProvider, Global } from "@emotion/react"
+import { RouterContext } from "next/dist/shared/lib/router-context"
 
-import { Themes } from "../styles/themes";
-import { GlobalStyles } from "../styles/global";
+import { Themes } from "../styles/themes"
+import { GlobalStyles } from "../styles/global"
 
-const OriginalNextImage = NextImage.default;
+const OriginalNextImage = NextImage.default
 
 Object.defineProperty(NextImage, "default", {
   configurable: true,
   value: (props) => <OriginalNextImage {...props} unoptimized />,
-});
+})
 
 const withThemeProvider = (Story, context) => {
   const background =
-    context.globals.backgrounds?.value || parameters.backgrounds.defaultColor;
+    context.globals.backgrounds?.value || parameters.backgrounds.defaultColor
   const theme = Object.values(Themes).find(
     (theme) => theme.background === background
-  );
+  )
 
   return (
     <ThemeProvider theme={theme}>
       <Story {...context} />
     </ThemeProvider>
-  );
-};
+  )
+}
 
 const withGlobalStyles = (Story, context) => (
   <>
     <Global styles={GlobalStyles} />
     <Story {...context} />
   </>
-);
+)
 
-export const decorators = [withThemeProvider, withGlobalStyles];
+export const decorators = [withThemeProvider, withGlobalStyles]
 
 export const parameters = {
   backgrounds: {
@@ -54,4 +54,4 @@ export const parameters = {
   nextRouter: {
     Provider: RouterContext.Provider,
   },
-};
+}

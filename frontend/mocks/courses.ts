@@ -173,4 +173,4 @@ export const response = {
       total: 2,
     },
   },
-};
+}
