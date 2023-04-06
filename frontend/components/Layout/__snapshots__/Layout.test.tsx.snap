@@ -127,7 +127,7 @@ exports[`Layout test cases Render check 1`] = `
     <footer
       class="css-1y0dtms"
     >
-      © 2022 NickOvchinnikov. All rights reserved.
+      © 2023 NickOvchinnikov. All rights reserved.
     </footer>
   </div>
 </DocumentFragment>
