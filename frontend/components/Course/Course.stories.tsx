@@ -1,19 +1,19 @@
-import { expect } from "@storybook/jest";
-import { screen } from "@storybook/testing-library";
-import { ComponentStoryObj, ComponentMeta } from "@storybook/react";
+import { expect } from "@storybook/jest"
+import { screen } from "@storybook/testing-library"
+import { ComponentStoryObj, ComponentMeta } from "@storybook/react"
 
-import { Course } from "./Course";
+import { Course } from "./Course"
 
 export default {
   title: "Content/Course",
   component: Course,
-} as ComponentMeta<typeof Course>;
+} as ComponentMeta<typeof Course>
 
 export const BasicCourse: ComponentStoryObj<typeof Course> = {
   play: async () => {
-    await expect(screen.getByRole("heading")).toBeInTheDocument();
-    await expect(screen.getByRole("img")).toBeInTheDocument();
-    await expect(screen.getByRole("link")).toBeInTheDocument();
+    await expect(screen.getByRole("heading")).toBeInTheDocument()
+    await expect(screen.getByRole("img")).toBeInTheDocument()
+    await expect(screen.getByRole("link")).toBeInTheDocument()
   },
   args: {
     header: "Hands-On React. Build advanced React JS Frontend with expert",
@@ -44,4 +44,4 @@ export const BasicCourse: ComponentStoryObj<typeof Course> = {
       control: false,
     },
   },
-};
+}
